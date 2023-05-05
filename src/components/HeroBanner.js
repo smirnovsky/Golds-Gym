@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Stack, Typography, Button } from '@mui/material'
 
-import HeroBannerImage from '../assets/images/banner.png'
+import HeroBannerImage from '../assets/images/banner1.png'
 
 
 const HeroBanner = () => {
@@ -25,7 +25,8 @@ const HeroBanner = () => {
         <Typography
             fontWeight={600}
             color='#FF2625'
-            ml={10}
+            mt={10}
+            ml={2}
             sx={{
                 opacity: 0.1,
                 display: { lg: 'block', xs: 'none' }
