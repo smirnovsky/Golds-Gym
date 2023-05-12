@@ -8,7 +8,7 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
     <Stack
         type='button'
         alignItems='center'
-        justifyItems='center'
+        justifyContent='center'
         className='bodyPart-card'
         sx={{
             borderTop: bodyPart === item ? '4px solid #ff2625' : '',
@@ -17,10 +17,16 @@ const BodyPart = ({ item, setBodyPart, bodyPart }) => {
             width: '270px',
             height: '280px',
             cursor: 'pointer',
-            gap: '47px'
+            gap: '47px',
+            marginTop: '30px',
+        }}
+        onClick={() => {
+            setBodyPart(item);
+            window.scrollTo({ top: 1800, left: 100, behavior: 'smooth' })
         }}
     >
-        <img src={Icon} alt='dumbbell' styles={{ with: '40px', height: '40px' }} />
+        <img src={Icon} alt='dumbbell' style={{ with: '40px', height: '40px' }} />
+        <Typography fontSize='24px' fontWeight='bold' color='#3A1212' textTransform='capitalize'>{item}</Typography>
     </Stack>
   )
 }
